@@ -1,7 +1,9 @@
-import {createApp} from 'vue'
+import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import {registerApplication,start} from 'single-spa'
+Vue.config.productionTip = false
+
 
 
 async function loadScript(url){
@@ -13,20 +15,21 @@ async function loadScript(url){
     document.head.appendChild(script)
   })
 }
+//singleSpa 缺陷不够灵活 不能动态加载js文件
+//样式不隔离 没有js沙箱机制
 
-registerApplication('singleDemo',
+registerApplication('myVueApp',
   async()=>{
     console.log('加载模块')
-    await loadScript('http://localhost:10000/js/chunk-vendors.js')
-    await loadScript('http://localhost:10000/js/app.js')
+    await loadScript('http://localhost:1000/js/chunk-vendors.js')
+    await loadScript('http://localhost:1000/js/app.js')
     return window.singleVue;
   },
   location=>location.pathname.startsWith('/vue')
 )
 start();
 
-const app = createApp(App);
-app.config.productionTip = false;
-app.use(router)
-app.mount('#app')
-
+new Vue({
+  router,
+  render: h => h(App)
+}).$mount('#app')

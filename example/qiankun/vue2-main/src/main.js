@@ -14,7 +14,7 @@ const apps = [
   },
   {
     name:'reactApp',
-    entry:'//localhost:20000', //默认会加载这个html 解析里面的js 动态执行 （子应用必须支持跨域）
+    entry:'//localhost:20001', //默认会加载这个html 解析里面的js 动态执行 （子应用必须支持跨域）
     container:'#react',
     activeRule:'/react'
   }

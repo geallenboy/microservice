@@ -1,5 +1,6 @@
 
 module.exports =  {
+    publicPath: '/subapp/vue',
     devServer:{
         port:1024,
         headers:{

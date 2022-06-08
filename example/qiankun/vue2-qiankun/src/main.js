@@ -17,12 +17,15 @@ if(window.__POWERED_BY_QIANKUN__){ //动态添加publicPath
 if (!window.__POWERED_BY_QIANKUN__) { //默认独立运行
   render();
 }
-//子组件的协议就ok
-export async function bootstrap(props){
 
+export async function bootstrap(props){
+  console.log('vue2 app bootstraped');
 }
 export async function mount(props){
-  render(props)
+  // render(props)
+  console.log(props.getGlobalState())
+  console.log('mount：', props);
+  render(props.getGlobalState())
 }
 export async function unmount(props){
   instance.$destroy();

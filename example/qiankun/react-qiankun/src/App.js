@@ -3,7 +3,8 @@ import logo from './logo.svg';
 import {BrowserRouter, Link,Route, Routes} from 'react-router-dom'
 import './App.css';
 
-function App() {
+function App({user}) {
+
   return (
     <BrowserRouter basename={'/react'}>
     <Link to="/">首页</Link>
@@ -13,16 +14,9 @@ function App() {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            子应用获取父应用数据
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <p>{user?.user?.name}</p>
         </header>
       </div>}></Route>
       <Route path="/about" element={<h1>关于页面</h1>}></Route>

@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.github-corner{
+  display: inline-block;width: 80px;height: 80px;position: absolute;top: 0;right: 0;z-index: 1;
+}
+.github-corner:hover .octo-arm{
+  animation:octocat-wave 560ms ease-in-out
+}
+@keyframes octocat-wave{
+  0%,100%{transform:rotate(0)}
+  20%,60%{transform:rotate(-25deg)}
+  40%,80%{transform:rotate(10deg)}
+}
+@media (max-width:500px){
+  .github-corner:hover .octo-arm{animation:none}
+  .github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}
+}
+  .layout-wrapper{
+    
+  }
+  .layout-header{
+    height: 50px;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    line-height: 50px;
+    position: relative;
+  
+  
+    
+  }
+  .logo {
+    float: left;
+    margin: 0 50px;
+  }
+  .sub-apps {
+    list-style: none;
+    margin: 0;
+    
+  }
+  .sub-apps li{
+    list-style: none;
+    display: inline-block;
+    padding: 0 20px;
+    cursor: pointer;
+    
+  }
+
+  .sub-apps li &.active{
+    color: #42b983;
+    text-decoration: underline;
+  }
+  .userinfo{
+    position: absolute;
+    right: 100px;
+    top: 0;
+  }
